@@ -1,0 +1,75 @@
+{
+  "city": "Abu Dhabi",
+  "year": 2025,
+  "fetched_utc": "2026-09-22T12:53:57.890657+00:00",
+  "daily": {
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CALLSKY_SFC_SW_DWN&community=RE&latitude=24.4539&longitude=54.3773&start=20250101&end=20251231&format=JSON&time-standard=UTC",
+    "parameters": {
+      "T2M": {
+        "units": "C",
+        "longname": "Temperature at 2 Meters"
+      },
+      "T2M_MAX": {
+        "units": "C",
+        "longname": "Temperature at 2 Meters Maximum"
+      },
+      "ALLSKY_SFC_SW_DWN": {
+        "units": "kW-hr/m^2/day",
+        "longname": "All Sky Surface Shortwave Downward Irradiance"
+      }
+    },
+    "header": {
+      "title": "NASA/POWER Source Native Resolution Daily Data",
+      "api": {
+        "version": "v2.10.0",
+        "name": "POWER Daily API"
+      },
+      "sources": [
+        "SYN1DEG",
+        "MERRA2",
+        "POWER"
+      ],
+      "fill_value": -999.0,
+      "time_standard": "UTC",
+      "start": "20250101",
+      "end": "20251231"
+    }
+  },
+  "hourly": {
+    "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=ALLSKY_SFC_SW_DWN%2CALLSKY_SFC_SW_DNI%2CALLSKY_SFC_SW_DIFF&community=RE&latitude=24.4539&longitude=54.3773&start=20250101&end=20251231&format=JSON&time-standard=UTC",
+    "parameters": {
+      "ALLSKY_SFC_SW_DWN": {
+        "units": "Wh/m^2",
+        "longname": "All Sky Surface Shortwave Downward Irradiance"
+      },
+      "ALLSKY_SFC_SW_DNI": {
+        "units": "Wh/m^2",
+        "longname": "All Sky Surface Shortwave Downward Direct Normal Irradiance"
+      },
+      "ALLSKY_SFC_SW_DIFF": {
+        "units": "Wh/m^2",
+        "longname": "All Sky Surface Shortwave Diffuse Irradiance"
+      }
+    },
+    "header": {
+      "title": "NASA/POWER Source Native Resolution Hourly Data",
+      "api": {
+        "version": "v2.10.2",
+        "name": "POWER Hourly API"
+      },
+      "sources": [
+        "SYN1DEG",
+        "POWER"
+      ],
+      "fill_value": -999.0,
+      "time_standard": "UTC",
+      "start": "20250101",
+      "end": "20251231"
+    }
+  },
+  "pvlib_version": "0.15.2",
+  "facade_method": "SPA at hourly midpoint; vertical isotropic transposition, ground albedo 0.20",
+  "sha256": "e89ef18da075e6e54f575166cd8e850541918c7369f48e3aedb66a4d851c8af3",
+  "rows": 365,
+  "august_mean_daily_max_c": 39.61935483870967
+}
